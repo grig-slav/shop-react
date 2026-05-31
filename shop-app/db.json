@@ -11,6 +11,68 @@
       "email": "asadf",
       "password": "asdf",
       "id": "3e-UK8Nc6lo"
+    },
+    {
+      "name": "gfh",
+      "email": "df",
+      "password": "ghdfg",
+      "id": "A5nW5Nl_daQ"
+    },
+    {
+      "name": "dfg",
+      "email": "dfgh",
+      "password": "hh",
+      "id": "1rsSdsmEQAY"
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": "NEpf23nBFmg"
+    },
+    {
+      "name": "sdfg",
+      "email": "s",
+      "password": "dfg",
+      "id": "1zl_uCTS1RU"
+    },
+    {
+      "name": "z",
+      "email": "zsadf@d",
+      "password": "12",
+      "id": "JTkChNVu5KA"
+    },
+    {
+      "name": "ывап",
+      "email": "asasd@as",
+      "password": "22",
+      "id": "9cOuW7eOneQ"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "title": "Avto",
+      "price": "100000$",
+      "image": "/images/1.webp"
+    },
+    {
+      "id": "2",
+      "title": "Avto2",
+      "price": "150000$",
+      "image": "/images/2.webp"
+    },
+    {
+      "id": "3",
+      "title": "Avto3",
+      "price": "1100000$",
+      "image": "/images/3.jpeg"
+    },
+    {
+      "id": "4",
+      "title": "Avto4",
+      "price": "4100000$",
+      "image": "/images/4.webp"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+  import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -7,6 +7,7 @@ import {Route, Routes} from 'react-router-dom'
 import RegisterPage from './pages/RegisterPage/RegisterPage'
 import LoginPage from './pages/LoginPage/LoginPage'
 import CatalogPage from './pages/CatalogPage/CatalogPage'
+import CartPage from './pages/CartPage/CartPage'
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
       element={<LoginPage />} />
       <Route path='/catalog'
       element={<CatalogPage />} />
+      <Route path='/cart'
+      element={<CartPage />} />
     </Routes>
     </div>
   )
