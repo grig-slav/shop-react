@@ -1,125 +1,341 @@
-body{
-    background-color: #616161;
+
+.pageBg {
+    min-height: 100vh;
+    background-color: #f9f9f9; 
+    color: #1a1a1a; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 80px 24px;
+    box-sizing: border-box;
 }
+
+.glowOrb1, .glowOrb2 {
+    display: none;
+}
+
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
 }
 
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 15px;
+    margin-bottom: 60px;
 }
 
-.header h1 {
-    margin: 0;
-    color: #000000;
-}
-
-.header span {
-    font-weight: bold;
-    margin-right: 15px;
-    color:antiquewhite;
-}
-
-.header button {
-    background-color: #ff4d4f;
-    color: white;
+.backBtn {
+    background: transparent;
     border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
+    color: #1a1a1a;
+    padding: 0;
     cursor: pointer;
-    transition: background-color 0.2s;
-        margin-right: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s ease;
 }
 
-.header button:hover {
-    background-color: #d9363e;
+.backBtn:hover {
+    opacity: 0.6;
 }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
-    gap: 25px;
-
+.btnScan {
+    display: none; 
 }
 
-.card {
-    background-color:#dabbbb;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 16px;
+
+.emptyView {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s, box-shadow 0.2s;
+    align-items: flex-start; 
+    max-width: 500px;
+    min-height: 40vh;
+    justify-content: center;
+}
+
+.emptyGlitch {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+}
+
+.emptySubtext {
+    color: #666666;
+    margin: 0 0 40px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+
+.neonBtn {
+    background: #e9e9e9;
+    border: none;
+    color: #1a1a1a;
+    padding: 14px 32px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 50px; 
+    transition: background-color 0.2s ease;
+}
+
+.neonBtn:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+
+.gridWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.itemsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.techCard {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 32px 0;
+    border-bottom: 1px solid #e5e5e5; 
     position: relative;
+    background: transparent;
+}
+
+.imgContainer {
+    width: 120px;
+    height: 140px;
+    background: #ffffff; 
+    border-radius: 4px; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02); 
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cardDetails {
+    flex-grow: 1;
+}
+
+.itemTitle {
+    margin: 0 0 24px 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
 }
 
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+.specs {
+    display: flex;
+    gap: 48px;
 }
 
+.specBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
 
-.id {
-    font-size: 12px;
-    color: #999;
-    margin-bottom: 8px;
+.label {
+    font-size: 0.75rem;
+    color: #999999;
+    letter-spacing: 1px;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
-
-.image {
-    width: 100%;
-    height: 200px;
-    object-fit: contain; 
-    margin-bottom: 15px;
-    background-color: #fafafa;
-    border-radius: 4px;
+.value {
+    font-size: 1.05rem;
+    color: #1a1a1a;
+    font-weight: 400;
 }
 
-.title {
-    font-size: 16px;
+
+.valueHighlight {
+    font-size: 1.05rem;
+    color: #1a1a1a;
     font-weight: 600;
-    color: #333;
-    margin: 0 0 10px 0;
-    line-height: 1.4;
-    height: 44px; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-
 }
 
-
-.card p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #000000;
-    margin: 0 0 15px 0;
-}
-
-.card button {
-
-    background-color: #999;
-    color: white;
+.deleteCross {
+    background: transparent;
     border: none;
-    padding: 10px;
-    border-radius: 4px;
-    font-weight: bold;
+    color: #cccccc;
+    font-size: 1.2rem;
+    font-weight: 300;
     cursor: pointer;
-    transition: background-color 0.2s;
-    width: 100%;
+    padding: 12px;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card button:hover {
-    background-color: #29b98e;
+.deleteCross:hover {
+    color: #1a1a1a;
+}
+
+
+.stickyFooterBar {
+    position: sticky;
+    bottom: 24px;
+    background: #111215;
+    color: #ffffff;
+    border-radius: 0; 
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+}
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footerLabel {
+    font-size: 0.75rem;
+    color: #888888;
+    letter-spacing: 1.5px;
+}
+
+.footerPrice {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+.footerActions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.clearLink {
+    background: transparent;
+    border: none;
+    color: #888888;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+    padding: 0;
+}
+
+.clearLink:hover {
+    color: #ffffff;
+}
+
+
+.actionNeonBtn {
+    background: #ffffff;
+    border: none;
+    color: #111215;
+    padding: 16px 36px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0; 
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.actionNeonBtn:hover {
+    background: #e9e9e9;
+}
+
+
+@media (max-width: 768px) {
+    .techCard {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 40px 0;
+    }
+    
+    .deleteCross {
+        position: absolute;
+        top: 32px;
+        right: 0;
+    }
+
+    .specs {
+        gap: 32px;
+    }
+
+    .stickyFooterBar {
+        flex-direction: column;
+        gap: 32px;
+        align-items: stretch;
+        padding: 24px;
+        bottom: 0;
+    }
+
+    .footerInfo {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerActions {
+        flex-direction: column-reverse;
+        gap: 24px;
+        align-items: stretch;
+    }
+    
+    .clearLink {
+        text-align: center;
+    }
+
+    .actionNeonBtn {
+        width: 100%;
+        text-align: center;
+    }
+}
+.zx{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
 }

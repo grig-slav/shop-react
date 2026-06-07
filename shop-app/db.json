@@ -47,31 +47,41 @@
       "email": "asasd@as",
       "password": "22",
       "id": "9cOuW7eOneQ"
+    },
+    {
+      "name": "as",
+      "email": "as@11",
+      "password": "1",
+      "id": "yZ71HB87mPE"
     }
   ],
   "products": [
     {
       "id": "1",
       "title": "Avto",
-      "price": "100000$",
+      "price": 100,
+      "stock":10,
       "image": "/images/1.webp"
     },
     {
       "id": "2",
       "title": "Avto2",
-      "price": "150000$",
+      "price": 1500,
+      "stock":10,
       "image": "/images/2.webp"
     },
     {
       "id": "3",
       "title": "Avto3",
-      "price": "1100000$",
+      "price": 11000,
+      "stock":10,
       "image": "/images/3.jpeg"
     },
     {
       "id": "4",
       "title": "Avto4",
-      "price": "4100000$",
+      "price": 4100,
+      "stock":10,
       "image": "/images/4.webp"
     }
   ],

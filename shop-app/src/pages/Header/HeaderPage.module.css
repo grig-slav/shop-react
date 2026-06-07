@@ -1,0 +1,55 @@
+.footerLabel {
+    font-size: 0.75rem;
+    color: #888888;
+    letter-spacing: 1.5px;
+}
+
+.footerPrice {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+.footerActions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.clearLink {
+    background: transparent;
+    border: none;
+    color: #888888;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+    padding: 0;
+}
+
+.clearLink:hover {
+    color: #ffffff;
+}
+.stickyFooterBar {
+    position: sticky;
+    bottom: 24px;
+    background: #111215;
+    color: #ffffff;
+    border-radius: 0; 
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+}
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
