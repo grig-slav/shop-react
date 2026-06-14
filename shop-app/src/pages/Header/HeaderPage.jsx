@@ -1,26 +1,39 @@
-import styles from './HeaderPage.module.css'
+import { Link, useNavigate } from 'react-router-dom';
+import styles from './HeaderPage.module.css';
 
-function HeaderPage(){
+function HeaderPage() {
+    const navigate = useNavigate();
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const user = JSON.parse(localStorage.getItem("user"));
 
+    function logout() {
+        localStorage.removeItem("user");
+        navigate("/login");
+    }
 
-    return(
-<div>
-        <div className={styles.stickyFooterBar}>
-                                    <div className={styles.footerInfo}>
-                                        <span className={styles.footerLabel}>ИТОГОВАЯ СУММА:</span>
-                                        <span className={styles.footerPrice}>{totalPrice}$</span>
-                                    </div>
-                                    <div className={styles.footerActions}>
-                                        <button className={styles.clearLink} onClick={clearCart}>
-                                            [ Очистить ]
-                                        </button>
-                                        <button className={styles.actionNeonBtn}>
-                                            ОФОРМИТЬ ЗАКАЗ
-                                        </button>
-                                    </div>
-                                </div>
-</div>
-    )
+    const cartCount = cart.reduce((sum, item) => sum + item.count, 0);
+
+    return (
+        <header className={styles.header}>
+            <Link to="/catalog" className={styles.logo}>
+                Shop
+            </Link>
+            <nav className={styles.nav}>
+                <Link to="/catalog">Каталог</Link>
+                <Link to="/cart">
+                    Корзина {cartCount > 0 && `(${cartCount})`}
+                </Link>
+                {user ? (
+                    <>
+                        <span>{user?.name}</span>
+                        <button onClick={logout}>Выйти</button>
+                    </>
+                ) : (
+                    <Link to="/login">Войти</Link>
+                )}
+            </nav>
+        </header>
+    );
 }
 
 export default HeaderPage;

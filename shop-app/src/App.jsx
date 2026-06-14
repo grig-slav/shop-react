@@ -9,13 +9,17 @@ import LoginPage from './pages/LoginPage/LoginPage'
 import CatalogPage from './pages/CatalogPage/CatalogPage'
 import CartPage from './pages/CartPage/CartPage'
 import ProtectedRoute from './components/ProtectedRoute'
-
-
+import HeaderPage from './pages/Header/HeaderPage'
+import FooterPage from './pages/FooterPage/FooterPage'
+import ProductPage from './pages/ProductPage/ProductPage'
 function App() {
 
   return(
     <div>
+      <HeaderPage/>
     <Routes>
+      <Route path='/product/:id'
+      element={<ProductPage />} />
       <Route path='/regist'
       element={<RegisterPage />} />
       <Route path='/login'
@@ -33,6 +37,7 @@ function App() {
       </ProtectedRoute>
     }/>
     </Routes>
+    <FooterPage/>
     </div>
   )
 }

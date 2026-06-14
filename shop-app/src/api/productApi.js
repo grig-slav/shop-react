@@ -4,3 +4,7 @@ export async function getProducts() {
     return responce.json();
 }
 
+export async function getProductsById(id) {
+    const responce=await fetch(`${API_URL}/${id}`);
+    return responce.json();
+}
