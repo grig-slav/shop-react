@@ -130,5 +130,39 @@
 .card button:active {
     opacity: 0.8;
 }
+.title{
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+.content{
+    display: flex;
+}
+.sidebar{
+    width: 250px;
+    min-width: 250px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: white;
+    height: fit-content;
+}
+.sidebar button{
+    width: 100%;
+    background: #111215;
+    color: #ffffff;
+    border: none;
+    padding: 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 10px;
+}
+.sidebar button:hover {
+   background-color: rgb(121, 121, 121);
+    color: black;
+}
+
 
 

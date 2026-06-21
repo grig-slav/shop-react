@@ -9,7 +9,12 @@ function CatalogPage() {
   const [products, setProducts] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const [user, setUser] = useState(null);
-
+  const[selectedCategory, setSelectedCategory]=useState("all");
+  const categories=["all", ... new Set(products.map(product=>product.category))];
+  const filterProduct=selectedCategory==="all"?
+  products:
+  products.filter(product=>product.category===selectedCategory);
+  
   useEffect(() => {
     async function loadProducts() {
       const data = await getProducts();
@@ -59,16 +64,17 @@ function CatalogPage() {
   return (
     <>
     <div className={styles.container}>
-      {/* <div className={styles.header}>
-        <h1>Каталог товаров</h1>
-        <div>
-          <span>{user?.name}</span>
-          <button onClick={() => navigate("/cart")}>Корзина({cartCount})</button>
-          <button onClick={logout}>Выйти</button>
-        </div>
-      </div> */}
+      <h1 className={styles.title}>Каталог товаров</h1>
+      <div className={styles.content}>
+        <aside className={styles.sidebar}>
+            <h3>Категории</h3>
+            {categories.map((category)=>(
+              <button key={category}
+              onClick={()=>setSelectedCategory(category)}>{category}</button>
+            ))}
+        </aside>
       <div className={styles.products}>
-        {products.map((product) => (
+        {filterProduct.map((product) => (
           <div className={styles.card} key={product.id} onClick={()=>navigate(`/product/${product.id}`)}>
             <img src={product.image} alt={product.title} />
             <h3>{product.title}</h3>
@@ -80,7 +86,7 @@ function CatalogPage() {
           </div>
         ))}
       </div>
-      
+      </div>
     </div>
   <FooterPage/>
   </>

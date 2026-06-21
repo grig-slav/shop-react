@@ -269,5 +269,6 @@
 }
 
 .clearButton:hover {
-    background: #333333;
+    background-color: white;
+    color: black;
 }
