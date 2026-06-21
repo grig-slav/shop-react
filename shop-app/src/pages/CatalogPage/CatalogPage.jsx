@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./CatalogPage.module.css";
 import { useEffect, useState } from "react";
 import { getProducts } from "../../api/productApi";
+import FooterPage from "../FooterPage/FooterPage";
 
 function CatalogPage() {
   const navigate = useNavigate();
@@ -56,6 +57,7 @@ function CatalogPage() {
   }
 
   return (
+    <>
     <div className={styles.container}>
       {/* <div className={styles.header}>
         <h1>Каталог товаров</h1>
@@ -78,8 +80,12 @@ function CatalogPage() {
           </div>
         ))}
       </div>
+      
     </div>
+  <FooterPage/>
+  </>
   );
+
 }
 
 export default CatalogPage;

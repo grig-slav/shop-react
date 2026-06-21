@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styles from "./CartPage.module.css";
-
+import FooterPage from "../FooterPage/FooterPage";
 function CartPage() {
     const navigate = useNavigate();
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);
@@ -46,6 +46,7 @@ function CartPage() {
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.count, 0);
 
     return (
+        <>
         <div className={styles.container}>
             <div className={styles.header}>
                 <h1>Корзина</h1>
@@ -110,7 +111,11 @@ function CartPage() {
                     </div>
                 </div>
             )}
+            
         </div>
+    <FooterPage/>
+    </>
+        
     );
 }
 

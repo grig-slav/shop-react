@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from "./ProductPage.module.css";
 import { useEffect, useState } from "react";
 import { getProducts } from "../../api/productApi";
+import FooterPage from "../FooterPage/FooterPage";
 
 function ProductPage() {
   const navigate = useNavigate();
@@ -82,6 +83,7 @@ function ProductPage() {
   }
 
   return (
+    <>
     <div className={styles.container}>
       <div className={styles.header}>
         <button className={styles.backButton} onClick={() => navigate("/catalog")}>
@@ -106,6 +108,8 @@ function ProductPage() {
         </div>
       </div>
     </div>
+    <FooterPage />
+    </>
   );
 }
 

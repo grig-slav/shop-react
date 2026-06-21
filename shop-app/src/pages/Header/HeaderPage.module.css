@@ -68,17 +68,3 @@
     border-color: #1a1a1a;
 }
 
-@media (max-width: 640px) {
-    .header {
-        padding: 0 20px;
-        height: 60px;
-    }
-
-    .nav {
-        gap: 20px;
-    }
-
-    .nav a, .nav span {
-        font-size: 0.85rem;
-    }
-}
