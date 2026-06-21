@@ -37,7 +37,7 @@ function App() {
       </ProtectedRoute>
     }/>
     </Routes>
-    <FooterPage/>
+    
     </div>
   )
 }

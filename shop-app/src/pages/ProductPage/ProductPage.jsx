@@ -8,16 +8,15 @@ function ProductPage() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [error, setError] = useState(false);
-  const [cartCount, setCartCount] = useState(0); // Добавлено состояние для счетчика
+  const [cartCount, setCartCount] = useState(0); 
 
-  // Функция обновления счетчика корзины
+  
   function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const count = cart.reduce((sum, item) => sum + item.count, 0);
     setCartCount(count);
   }
 
-  // Инициализация счетчика при загрузке страницы
   useEffect(() => {
     updateCartCount();
   }, []);
@@ -65,7 +64,7 @@ function ProductPage() {
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("Товар добавлен в корзину");
 
-    // Теперь функция успешно вызовется внутри компонента
+ 
     updateCartCount();
   }
 

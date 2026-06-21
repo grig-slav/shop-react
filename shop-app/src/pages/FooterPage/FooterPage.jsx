@@ -25,8 +25,7 @@ function FooterPage() {
                         <Link to="/cart">
                             Корзина {cartCount > 0 && `(${cartCount})`}
                         </Link>
-                        {/* <Link to="/catalog?category=new">Новинки</Link> НА БУДУЩЕЕ СОРТИРОВКА 
-                        <Link to="/catalog?category=sale">Распродажа</Link> */}
+                   
                     </nav>
                 </div>
 
