@@ -45,6 +45,10 @@ function CartPage() {
 
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.count, 0);
 
+
+
+    const firstColor = product.colors?.[0];
+    const firstImage = firstColor?.images?.[0] || '/images/default.jpg'; 
     return (
         <>
         <div className={styles.container}>
@@ -55,45 +59,58 @@ function CartPage() {
                 </button>
             </div>
             
-            {cart.length === 0 ? (
-                <div className={styles.emptyCard}>
-                    <p className={styles.emptyMessage}>В корзине пока ничего нет</p>
-                </div>
-            ) : (
-                <div className={styles.cartLayout}>
-                    <div className={styles.itemsCard}>
-                        {cart.map((item) => (
-                            <div className={styles.itemRow} key={item.id}>
-                                <div className={styles.imageWrapper}>
-                                    <img src={item.image} alt={item.title} className={styles.itemImage} />
+           {cart.length === 0 ? (
+    <div className={styles.emptyCard}>
+        <p className={styles.emptyMessage}>В корзине пока ничего нет</p>
+    </div>
+) : (
+    <div className={styles.cartLayout}>
+        <div className={styles.itemsCard}>
+            {cart.map((item) => {
+
+                const itemImage = item.colors?.[0]?.images?.[0] || '/images/default.jpg';
+
+                return (
+                    <div className={styles.itemRow} key={item.id}>
+                        <div className={styles.imageWrapper}>
+                            
+                            <img src={itemImage} alt={item.title} className={styles.itemImage} />
+                        </div>
+                        <div className={styles.itemMain}>
+                            <div className={styles.itemInfo}>
+                                <h3>{item.title}</h3>
+                               
+                                {item.colors?.[0] && (
+                                    <p className={styles.colorText}>Цвет: {item.colors[0].colorName}</p>
+                                )}
+                                <p className={styles.singlePrice}>{item.price} rub. / шт</p>
+                            </div>
+                            <div className={styles.itemControls}>
+                                <div className={styles.counter}>
+                                    <button 
+                                        disabled={item.count === 1} 
+                                        onClick={() => decreaseCount(item.id)}
+                                    >
+                                        —
+                                    </button>
+                                    <span>{item.count}</span>
+                                    <button onClick={() => increaseCount(item.id)}>+</button>
                                 </div>
-                                <div className={styles.itemMain}>
-                                    <div className={styles.itemInfo}>
-                                        <h3>{item.title}</h3>
-                                        <p className={styles.singlePrice}>{item.price} rub. / шт</p>
-                                    </div>
-                                    <div className={styles.itemControls}>
-                                        <div className={styles.counter}>
-                                            <button 
-                                                disabled={item.count === 1} 
-                                                onClick={() => decreaseCount(item.id)}
-                                            >
-                                                —
-                                            </button>
-                                            <span>{item.count}</span>
-                                            <button onClick={() => increaseCount(item.id)}>+</button>
-                                        </div>
-                                        <div className={styles.priceBlock}>
-                                            <p className={styles.itemTotal}>{item.price * item.count} rub.</p>
-                                            <button className={styles.removeButton} onClick={() => removeFromCart(item.id)}>
-                                                Удалить
-                                            </button>
-                                        </div>
-                                    </div>
+                                <div className={styles.priceBlock}>
+                                    <p className={styles.itemTotal}>{item.price * item.count} rub.</p>
+                                    <button className={styles.removeButton} onClick={() => removeFromCart(item.id)}>
+                                        Удалить
+                                    </button>
                                 </div>
                             </div>
-                        ))}
+                        </div>
                     </div>
+                );
+            })}
+        </div>
+    </div>
+)}
+
 
                     <div className={styles.summaryCard}>
                         <h2>Ваш заказ</h2>
@@ -110,9 +127,9 @@ function CartPage() {
                         </button>
                     </div>
                 </div>
-            )}
+           
             
-        </div>
+      
     <FooterPage/>
     </>
         

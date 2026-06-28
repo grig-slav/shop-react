@@ -74,20 +74,44 @@ function CatalogPage() {
             ))}
         </aside>
       <div className={styles.products}>
-        {filterProduct.map((product) => (
-          <div className={styles.card} key={product.id} onClick={()=>navigate(`/product/${product.id}`)}>
-            <img src={product.image} alt={product.title} />
-            <h3>{product.title}</h3>
-            <p>{product.price}$</p>
-            <button onClick={(event) =>{
-              event.stopPropagation();
-               addToCart(product);
-            } }>Добавить в корзину</button>
-          </div>
-        ))}
+  {filterProduct.map((product) => {
+   
+    const firstColor = product.colors?.[0];
+    const firstImage = firstColor?.images?.[0] || '/images/default.jpg'; 
+
+    return (
+      <div 
+        className={styles.card} 
+        key={product.id} 
+        onClick={() => navigate(`/product/${product.id}`)}
+      >
+       
+        <img src={firstImage} alt={product.title} />
+        
+       
+        <h3>{product.title}</h3>
+        
+       
+        {firstColor && <span className={styles.colorBadge}>{firstColor.colorName}</span>}
+        
+        <p>{product.price}$</p>
+        
+        <button 
+          onClick={(event) => {
+            event.stopPropagation(); 
+            addToCart(product);
+          }}
+        >
+          Добавить в корзину
+        </button>
+      </div>
+    );
+  })}
+</div>
+
       </div>
       </div>
-    </div>
+    
   <FooterPage/>
   </>
   );
