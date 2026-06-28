@@ -1,132 +1,268 @@
-
 .container {
-    min-height: 100vh;
-    background-color: #f9f9f9;
-    color: #1a1a1a;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    padding: 60px 40px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 .header {
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 40px;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
-
 .backButton {
-    background: transparent;
-    color: #1a1a1a;
-    border: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    border-bottom: 1px solid #1a1a1a;
-    padding: 4px 0;
-    transition: opacity 0.2s ease;
+  background: transparent;
+  color: #1a1a1a;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 4px 0;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
 }
 
 .backButton:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
-
-.cartLayout {
-    width: 100%;
-    max-width: 1100px;
-    display: grid;
-    grid-template-columns: 1fr 360px;
-    gap: 32px;
-    align-items: start;
-}
-
-
-.product {
-    width: 100%;
-    max-width: 1500px;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 50px;
-    background: #ffffff;
-    padding: 40px;
-    box-sizing: border-box;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+.productLayout {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+  align-items: start;
 }
 
 .left {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.left h1 {
-    font-size: 2.2rem;
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+.productTitle {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0;
+  line-height: 1.1;
 }
 
-.left img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: contain;
-    background: #ffffff;
+.galleryWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e5e5;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.mainImage:hover {
+  transform: scale(1.02);
+}
+
+.carouselPrev,
+.carouselNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  color: #1a1a1a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  z-index: 10;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carouselPrev {
+  left: 16px;
+}
+
+.carouselNext {
+  right: 16px;
+}
+
+.carouselPrev:hover,
+.carouselNext:hover {
+  background-color: #fff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+}
+
+.thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.thumb {
+  width: 80px;
+  height: 60px;
+  flex-shrink: 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  overflow: hidden;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb:hover {
+  border-color: #ccc;
+}
+
+.thumbActive {
+  border-color: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.colorSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.selectorLabel {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.colorOptions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.colorBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  padding: 0;
+  background-color: #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorBtnActive {
+  border-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.colorBtn span,
+.colorBtnActive span {
+  display: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.colorBtnActive span {
+  display: block;
 }
 
 .right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 10px;
 }
 
 .cost {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0;
-    color: #1a1a1a;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
 }
 
 .description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666666;
-    margin: 0;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
 }
 
 .stock {
-    font-size: 0.9rem;
-    color: #999999;
-    margin: 0;
+  margin: 0;
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 500;
 }
 
 .add {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    border: none;
-    padding: 16px 32px;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  background: #111215;
+  color: #ffffff;
+  border: none;
+  padding: 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .add:hover {
-    background-color: #404040;
+  background-color: #333;
 }
 
-
+.add:active {
+  transform: scale(0.98);
+}
 

@@ -1,274 +1,274 @@
 .container {
-    min-height: 100vh;
-    background-color: #f9f9f9;
-    color: #1a1a1a;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    padding: 60px 40px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .header h1 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-    margin: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0;
 }
 
 .backButton {
-    background: transparent;
-    color: #1a1a1a;
-    border: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    border-bottom: 1px solid #1a1a1a;
-    padding: 4px 0;
-    transition: opacity 0.2s ease;
+  background: transparent;
+  color: #1a1a1a;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 4px 0;
+  transition: opacity 0.2s ease;
 }
 
 .backButton:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .emptyCard {
-    width: 100%;
-    max-width: 1100px;
-    background: #ffffff;
-    padding: 80px 40px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
-    border: 1px solid #e5e5e5;
-    text-align: center;
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  padding: 80px 40px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+  border: 1px solid #e5e5e5;
+  text-align: center;
 }
 
 .emptyMessage {
-    margin: 0;
-    font-size: 1rem;
-    color: #999999;
-    letter-spacing: 0.5px;
+  margin: 0;
+  font-size: 1rem;
+  color: #999999;
+  letter-spacing: 0.5px;
 }
 
 .cartLayout {
-    width: 100%;
-    max-width: 1100px;
-    display: grid;
-    grid-template-columns: 1fr 360px;
-    gap: 32px;
-    align-items: start;
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 32px;
+  align-items: start;
 }
 
 .itemsCard {
-    background: #ffffff;
-    padding: 0 40px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
-    border: 1px solid #e5e5e5;
+  background: #ffffff;
+  padding: 0 40px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+  border: 1px solid #e5e5e5;
 }
 
 .itemRow {
-    display: flex;
-    align-items: center;
-    padding: 32px 0;
-    border-bottom: 1px solid #f0f0f0;
-    gap: 32px;
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 32px;
 }
 
 .itemRow:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .imageWrapper {
-    width: 240px;
-    height: 140px;
-    overflow: hidden;
-    background-color: #ffffff;
-    border: 1px solid #e5e5e5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+  width: 240px;
+  height: 140px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .itemImage {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .itemRow:hover .itemImage {
-    transform: scale(1.04);
+  transform: scale(1.04);
 }
 
 .itemMain {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .itemInfo h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin: 0 0 6px 0;
-    letter-spacing: -0.3px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.3px;
 }
 
 .singlePrice {
-    margin: 0;
-    font-size: 0.85rem;
-    color: #888888;
+  margin: 0;
+  font-size: 0.85rem;
+  color: #888888;
 }
 
 .itemControls {
-    display: flex;
-    align-items: center;
-    gap: 48px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
 }
 
 .counter {
-    display: flex;
-    align-items: center;
-    border: 1px solid #e5e5e5;
-    background: #ffffff;
-    border-radius: 2px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+  border-radius: 2px;
 }
 
 .counter button {
-    background: transparent;
-    color: #1a1a1a;
-    border: none;
-    width: 34px;
-    height: 34px;
-    font-size: 0.8rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.15s ease;
+  background: transparent;
+  color: #1a1a1a;
+  border: none;
+  width: 34px;
+  height: 34px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease;
 }
 
 .counter button:hover:not(:disabled) {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .counter button:disabled {
-    color: #cccccc;
-    cursor: not-allowed;
+  color: #cccccc;
+  cursor: not-allowed;
 }
 
 .counter span {
-    font-size: 0.9rem;
-    font-weight: 600;
-    min-width: 30px;
-    text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-width: 30px;
+  text-align: center;
 }
 
 .priceBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    min-width: 100px;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 100px;
+  gap: 4px;
 }
 
 .itemTotal {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: -0.3px;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
 }
 
 .removeButton {
-    background: transparent;
-    color: #999999;
-    border: none;
-    padding: 0;
-    font-size: 0.75rem;
-    font-weight: 500;
-    cursor: pointer;
-    border-bottom: 1px solid transparent;
-    transition: color 0.2s ease, border-color 0.2s ease;
+  background: transparent;
+  color: #999999;
+  border: none;
+  padding: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .removeButton:hover {
-    color: #1a1a1a;
-    border-color: #1a1a1a;
+  color: #1a1a1a;
+  border-color: #1a1a1a;
 }
 
 .summaryCard {
-    background: #ffffff;
-    padding: 40px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
-    border: 1px solid #e5e5e5;
+  background: #ffffff;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+  border: 1px solid #e5e5e5;
 }
 
 .summaryCard h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin: 0 0 24px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0 0 24px 0;
 }
 
 .summaryRow {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    color: #666666;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666666;
+  margin-bottom: 16px;
 }
 
 .totalRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    border-top: 1px solid #e5e5e5;
-    padding-top: 20px;
-    margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 20px;
+  margin-bottom: 32px;
 }
 
 .totalRow span:first-child {
-    font-size: 1rem;
-    font-weight: 600;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .finalPrice {
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .clearButton {
-    width: 100%;
-    background: #111215;
-    color: #ffffff;
-    border: none;
-    padding: 18px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+  width: 100%;
+  background: #111215;
+  color: #ffffff;
+  border: none;
+  padding: 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .clearButton:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }

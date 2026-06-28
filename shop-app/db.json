@@ -1,5 +1,4 @@
 {
-  "$schema": "./node_modules/json-server/schema.json",
   "users": [
     {
       "name": "afd",
@@ -66,6 +65,12 @@
       "email": "12@12",
       "password": "12",
       "id": "-TwL-mWFDv4"
+    },
+    {
+      "name": "123",
+      "email": "123@123",
+      "password": "123",
+      "id": "tK5n-vjl6cA"
     }
   ],
   "products": [
@@ -78,29 +83,8 @@
       "description": "Элегантный городской седан, сочетающий в себе строгий минимализм и передовые цифровые технологии. Прогрессивный дизайн кузова, безупречная эргономика салона и интеллектуальные системы помощи водителю делают каждую поездку максимально комфортной и безопасной.",
       "colors": [
         {
-          "colorName": "Черный Мифы",
-          "colorHex": "#000000",
-          "images": [
-            "/images/1.webp",
-            "/images/1-3.jpg",
-            "/images/1-2.jpg",
-            "/images/1-4.jpg",
-            "/images/1-5.jpg"
-          ]
-        },
-        {
-          "colorName": "Черный Мифы",
-          "colorHex": "#000000",
-          "images": [
-            "/images/1.webp",
-            "/images/1-3.jpg",
-            "/images/1-2.jpg",
-            "/images/1-4.jpg",
-            "/images/1-5.jpg"
-          ]
-        },{
           "colorName": "Морское дно",
-          "colorHex": "#000000",
+          "colorHex": "#1A2B3C",
           "images": [
             "/images/1.webp",
             "/images/1-3.jpg",
@@ -110,14 +94,25 @@
           ]
         },
         {
-          "colorName": "белый снег",
+          "colorName": "Чёрный Мифы",
           "colorHex": "#000000",
           "images": [
-            "/images/1.webp",
-            "/images/1-3.jpg",
-            "/images/1-2.jpg",
-            "/images/1-4.jpg",
-            "/images/1-5.jpg"
+            "/images/1-3-1.webp",
+            "/images/1-3-2.webp",
+            "/images/1-3-3.webp",
+            "/images/1-3-4.webp",
+            "/images/1-3-5.webp"
+          ]
+        },
+        {
+          "colorName": "Белый снег",
+          "colorHex": "#FDFDFD",
+          "images": [
+            "/images/1-2-1.webp",
+            "/images/1-2-2.webp",
+            "/images/1-2-3.webp",
+            "/images/1-2-4.webp",
+            "/images/1-2-5.webp"
           ]
         }
       ]
@@ -135,11 +130,32 @@
           "colorHex": "#53565A",
           "images": [
             "/images/2.webp",
-            "/images/2-1.webp",
-            "/images/2-2.webp",
-            "/images/2-3.webp",
-            "/images/2-4.webp"
-            
+            "/images/2-1-1.webp",
+            "/images/2-1-2.webp",
+            "/images/2-1-3.webp",
+            "/images/2-1-4.webp"
+          ]
+        },
+        {
+          "colorName": "Чёрный Мифы",
+          "colorHex": "#000000",
+          "images": [
+            "/images/2-2-1.webp",
+            "/images/2-2-2.webp",
+            "/images/2-2-3.webp",
+            "/images/2-2-4.webp",
+            "/images/2-2-5.webp"
+          ]
+        },
+        {
+          "colorName": "Белый",
+          "colorHex": "#FDFDFD",
+          "images": [
+            "/images/2-2.jpg",
+            "/images/2-3.jpg",
+            "/images/2-4.jpg",
+            "/images/2-5.jpg",
+            "/images/2-1.jpg"
           ]
         }
       ]
@@ -157,10 +173,32 @@
           "colorHex": "#FDFDFD",
           "images": [
             "/images/3.jpeg",
-            "/images/3-1.jpeg",
-            "/images/3-2.jpeg",
-            "/images/3-3.jpeg",
-            "/images/3-4.jpeg"
+            "/images/3-1-2.jpg",
+            "/images/3-1-3.jpg",
+            "/images/3-1-4.jpg",
+            "/images/3-1-5.jpg"
+          ]
+        },
+        {
+          "colorName": "Чёрный Мифы",
+          "colorHex": "#000000",
+          "images": [
+            "/images/3-2-1.jpg",
+            "/images/3-2-2.jpg",
+            "/images/3-2-3.jpg",
+            "/images/3-2-4.jpg",
+            "/images/3-2-5.jpg"
+          ]
+        },
+        {
+          "colorName": "Лазурный берег",
+          "colorHex": "#4A90E2",
+          "images": [
+            "/images/3-3-1.jpg",
+            "/images/3-3-2.jpg",
+            "/images/3-3-3.jpg",
+            "/images/3-3-4.jpg",
+            "/images/3-3-5.jpg"
           ]
         }
       ]
@@ -171,17 +209,39 @@
       "price": 4100,
       "stock": 10,
       "category": "sport",
-      "description": "Культовый спортивный универсал, который стирает границы между трековым суперкаром и практичным повседневным автомобилем. Бескомпромиссная динамика разгона V8, расширенный агрессивный кузов и непревзойденная управляемость для истинных ценителей скорости.",
+      "description": "Культовый спортивный универсал, который стирает границы между трековым суперкаром и практичным повседневным автомобилем. Бескомпромиссная динамика разгона V8, расширенный агрессивный кузов и непревзойдённая управляемость для истинных ценителей скорости.",
       "colors": [
         {
-          "colorName": "Красный Танго",
-          "colorHex": "#B30000",
+          "colorName": "Серая сталь",
+          "colorHex": "#7F8C8D",
           "images": [
-             "/images/4.webp",
-            "/images/4-1.jpeg",
-            "/images/4-2.jpeg",
-            "/images/4-3.jpeg",
-            "/images/4-4.jpeg"
+            "/images/4.webp",
+            "/images/4-1-2.jpg",
+            "/images/4-1-5.jpg",
+            "/images/4-1-3.jpg",
+            "/images/4-1-4.jpg"
+          ]
+        },
+        {
+          "colorName": "Красный танго",
+          "colorHex": "#D32F2F",
+          "images": [
+            "/images/4-2-1.jpg",
+            "/images/4-2-2.jpg",
+            "/images/4-2-5.jpg",
+            "/images/4-2-3.jpg",
+            "/images/4-2-4.jpg"
+          ]
+        },
+        {
+          "colorName": "Тёмно‑зелёный",
+          "colorHex": "#2E7D32",
+          "images": [
+            "/images/4-3-1.jpg",
+            "/images/4-3-2.jpg",
+            "/images/4-3-5.jpg",
+            "/images/4-3-3.jpg",
+            "/images/4-3-4.jpg"
           ]
         }
       ]
@@ -195,17 +255,40 @@
       "description": "Элегантный городской седан, сочетающий в себе строгий минимализм и передовые цифровые технологии. Прогрессивный дизайн кузова, безупречная эргономика салона и интеллектуальные системы помощи водителю делают каждую поездку максимально комфортной и безопасной.",
       "colors": [
         {
-          "colorName": "Черный",
-          "colorHex": "#000000",
+          "colorName": "Синий",
+          "colorHex": "#53565A",
           "images": [
             "/images/1.webp",
-            "/images/1-3.jpg",
             "/images/1-2.jpg",
+            "/images/1-3.jpg",
             "/images/1-4.jpg",
             "/images/1-5.jpg"
           ]
+        },
+        {
+          "colorName": "Чёрный Мифы",
+          "colorHex": "#000000",
+          "images": [
+            "/images/1-3-1.webp",
+            "/images/1-3-2.webp",
+            "/images/1-3-3.webp",
+            "/images/1-3-4.webp",
+            "/images/1-3-5.webp"
+          ]
+        },
+        {
+          "colorName": "Белый снег",
+          "colorHex": "#FDFDFD",
+          "images": [
+            "/images/1-2-1.webp",
+            "/images/1-2-2.webp",
+            "/images/1-2-3.webp",
+            "/images/1-2-4.webp",
+            "/images/1-2-5.webp"
+          ]
         }
       ]
+        
     },
     {
       "id": "6",
@@ -216,14 +299,36 @@
       "description": "Полноразмерный премиальный кроссовер, созданный для уверенности на любых дорогах. Обладает внушительным пространством, брутальным силуэтом и легендарным полным приводом quattro. Идеальный выбор для тех, кто не привык идти на компромиссы между мощностью и семейным уютом.",
       "colors": [
         {
-          "colorName": "Серый",
+          "colorName": "Серый Дайтона",
           "colorHex": "#53565A",
           "images": [
             "/images/2.webp",
-            "/images/2-1.webp",
-            "/images/2-2.webp",
-            "/images/2-3.webp",
-            "/images/2-4.webp"
+            "/images/2-1-1.webp",
+            "/images/2-1-2.webp",
+            "/images/2-1-3.webp",
+            "/images/2-1-4.webp"
+          ]
+        },
+        {
+          "colorName": "Чёрный Мифы",
+          "colorHex": "#000000",
+          "images": [
+            "/images/2-2-1.webp",
+            "/images/2-2-2.jpg",
+            "/images/2-2-3.jpg",
+            "/images/2-2-4.jpg",
+            "/images/2-2-5.jpg"
+          ]
+        },
+        {
+          "colorName": "Белый",
+          "colorHex": "#FDFDFD",
+          "images": [
+            "/images/2-2.jpg",
+            "/images/2-3.jpg",
+            "/images/2-4.jpg",
+            "/images/2-5.jpg",
+            "/images/2-1.jpg"
           ]
         }
       ]
@@ -237,14 +342,36 @@
       "description": "Полностью электрический кроссовер, воплощающий философию устойчивого будущего. Бесшумный разгон, мгновенный отклик на нажатие педали и футуристичный интерьер с сенсорным управлением MMI Touch. Вектор новой мобильности, доступный уже сегодня.",
       "colors": [
         {
-          "colorName": "Белый",
+          "colorName": "Белый Ледник",
           "colorHex": "#FDFDFD",
           "images": [
-             "/images/3.jpeg",
-            "/images/3-1.jpeg",
-            "/images/3-2.jpeg",
-            "/images/3-3.jpeg",
-            "/images/3-4.jpeg"
+            "/images/3.jpeg",
+            "/images/3-1-2.jpg",
+            "/images/3-1-3.jpg",
+            "/images/3-1-4.jpg",
+            "/images/3-1-5.jpg"
+          ]
+        },
+        {
+          "colorName": "Чёрный Мифы",
+          "colorHex": "#000000",
+          "images": [
+            "/images/3-2-1.jpg",
+            "/images/3-2-2.jpg",
+            "/images/3-2-3.jpg",
+            "/images/3-2-4.jpg",
+            "/images/3-2-5.jpg"
+          ]
+        },
+        {
+          "colorName": "Лазурный берег",
+          "colorHex": "#4A90E2",
+          "images": [
+            "/images/3-3-1.jpg",
+            "/images/3-3-2.jpg",
+            "/images/3-3-3.jpg",
+            "/images/3-3-4.jpg",
+            "/images/3-3-5.jpg"
           ]
         }
       ]
@@ -255,20 +382,43 @@
       "price": 4100,
       "stock": 10,
       "category": "sport",
-      "description": "Культовый спортивный универсал, который стирает границы между трековым суперкаром и практичным повседневным автомобилем. Бескомпромиссная динамика разгона V8, расширенный агрессивный кузов и непревзойденная управляемость для истинных ценителей скорости.",
+      "description": "Культовый спортивный универсал, который стирает границы между трековым суперкаром и практичным повседневным автомобилем. Бескомпромиссная динамика разгона V8, расширенный агрессивный кузов и непревзойдённая управляемость для истинных ценителей скорости.",
       "colors": [
         {
-          "colorName": "Красный",
-          "colorHex": "#B30000",
+          "colorName": "Серая сталь",
+          "colorHex": "#7F8C8D",
           "images": [
             "/images/4.webp",
-            "/images/4-1.jpeg",
-            "/images/4-2.jpeg",
-            "/images/4-3.jpeg",
-            "/images/4-4.jpeg" 
+            "/images/4-1-2.jpg",
+            "/images/4-1-5.jpg",
+            "/images/4-1-3.jpg",
+            "/images/4-1-4.jpg"
+          ]
+        },
+        {
+          "colorName": "Красный танго",
+          "colorHex": "#D32F2F",
+          "images": [
+            "/images/4-2-1.jpg",
+            "/images/4-2-2.jpg",
+            "/images/4-2-5.jpg",
+            "/images/4-2-3.jpg",
+            "/images/4-2-4.jpg"
+          ]
+        },
+        {
+          "colorName": "Тёмно‑зелёный",
+          "colorHex": "#2E7D32",
+          "images": [
+            "/images/4-3-1.jpg",
+            "/images/4-3-2.jpg",
+            "/images/4-3-5.jpg",
+            "/images/4-3-3.jpg",
+            "/images/4-3-4.jpg"
           ]
         }
       ]
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
