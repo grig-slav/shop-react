@@ -1,0 +1,1224 @@
+.wrapper {
+  width: 100%;
+  background: #0b0b0b;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+
+
+.landscapeSection1 {
+  position: relative;
+
+  width: 100%;
+  height: 150vh;
+
+  overflow: hidden;
+
+  background: #0b0b0b;
+
+  font-family: sans-serif;
+}
+
+.heroOverlay {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+
+.inviteHolder {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+.invite {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+
+  padding: 20px;
+  margin: 0;
+
+  box-sizing: border-box;
+
+  text-align: center;
+  color: #a7c1e9;
+  font-family: fantasy, sans-serif;
+  font-size: clamp(
+    48px,
+    8vw,
+    100px
+  );
+
+  line-height: 1.08;
+
+  letter-spacing: 1px;
+
+  opacity: 0.5;
+
+  transform:
+    translateY(-80px)
+    scaleY(1.15);
+  transition:
+    opacity 0.08s linear;
+}
+
+@keyframes inviteAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-80px)
+      scaleY(1.15);
+  }
+
+  to {
+    opacity: 0.65;
+    transform:
+      translateY(0)
+      scaleY(1.15);
+  }
+}
+
+
+
+.inviteFixed {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: min(
+    100vw
+  );
+  margin: 0;
+  z-index: 100;
+  animation: none;
+  transform:
+    translate(-50%, -50%)
+    scaleY(1.15);
+}
+.bottomSection {
+  width: 100%;
+  min-height: 100vh;
+  padding: 90px 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b0b0b;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 100px;
+}
+
+.mainGrid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 1fr)
+    minmax(350px, 2fr)
+    minmax(180px, 1fr);
+
+  gap: 60px;
+
+  align-items: start;
+}
+
+.navBlock h3,
+.contactsBlock h3,
+.partnersBlock h3 {
+  margin-bottom: 20px;
+  color: #555555;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.navBlock ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navBlock ul li {
+  margin-bottom: 15px;
+}
+
+.navBlock ul li a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.4;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navBlock ul li a:hover {
+  color: #999999;
+  transform:
+    translateX(4px);
+}
+
+
+
+.formBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.formBlock h2 {
+  margin-bottom: 40px;
+
+  font-size:
+    clamp(24px, 3vw, 36px);
+
+  line-height: 1.2;
+
+  letter-spacing: 1px;
+
+  font-weight: 800;
+}
+
+.formBlock form {
+  width: 100%;
+  max-width: 520px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.inputGroup {
+  width: 100%;
+  padding-bottom: 9px;
+  border-bottom:
+    1px solid #333333;
+  box-sizing: border-box;
+}
+
+.inputGroup input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: inherit;
+}
+
+.inputGroup input::placeholder {
+  color: #777777;
+  opacity: 1;
+}
+
+.phoneInputWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.flag,
+.prefix {
+  flex-shrink: 0;
+}
+
+.flag {
+  font-size: 17px;
+}
+
+.prefix {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.phoneInputWrapper input {
+  flex: 1;
+}
+
+.disclaimer {
+  margin: 0;
+  color: #666666;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.disclaimer a {
+  color: #777777;
+  text-decoration: underline;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.submitBtn:hover {
+  transform:
+    translateY(-2px);
+  background: #e8e8e8;
+}
+
+.submitBtn:active {
+  transform:
+    translateY(0);
+}
+
+
+
+.contactsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  text-align: right;
+}
+
+.contactsBlock p {
+  margin:
+    0 0 8px;
+}
+
+.contactsBlock a {
+  color: #ffffff;
+  text-decoration: none;
+  transition:
+    color 0.2s ease;
+}
+
+.contactsBlock a:hover {
+  color: #999999;
+}
+
+.nameLabel {
+  color: #666666;
+  margin: 5px 0;
+}
+
+
+.partnersBlock {
+  width: 100%;
+  padding-top: 40px;
+  border-top:
+    1px solid #1a1a1a;
+  text-align: center;
+}
+
+.logos {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 60px;
+
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+}
+
+.logoFormula {
+  font-size: 24px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.logoFinntrail {
+  font-size: 24px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.redText {
+  color: #ff0000;
+}
+
+
+
+.animateTop {
+  opacity: 0;
+
+  animation:
+    dropElement
+    0.8s
+    ease
+    0.1s
+    forwards;
+}
+
+.animateTopDelay1 {
+  opacity: 0;
+
+  animation:
+    dropElement
+    0.8s
+    ease
+    0.25s
+    forwards;
+}
+
+.animateTopDelay2 {
+  opacity: 0;
+
+  animation:
+    dropElement
+    0.8s
+    ease
+    0.4s
+    forwards;
+}
+
+.animateTopDelay3 {
+  opacity: 0;
+
+  animation:
+    dropElement
+    0.8s
+    ease
+    0.55s
+    forwards;
+}
+
+@keyframes dropElement {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+
+.landscapeSection {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  background: #0b0b0b;
+
+  font-family: sans-serif;
+}
+
+.overlayContent {
+  position: relative;
+
+  z-index: 1;
+
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 60px;
+
+  box-sizing: border-box;
+}
+
+
+
+.coordinatesWrapper {
+  text-align: center;
+
+  color: #ffffff;
+
+  margin-left: 470px;
+
+  margin-top: 370px;
+}
+
+.caption {
+  margin-bottom: 5px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  line-height: 1.3;
+
+  letter-spacing: 2px;
+}
+
+.geo {
+  margin-bottom: 25px;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+
+.targetZone {
+  position: relative;
+
+  width: 320px;
+
+  height: 200px;
+
+  margin: 0 auto;
+}
+
+.corner {
+  position: absolute;
+
+  width: 14px;
+
+  height: 14px;
+
+  border:
+    1.5px solid #ffffff;
+
+  opacity: 0;
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+}
+
+.topLeft {
+  top: 0;
+  left: 0;
+
+  border-right: none;
+  border-bottom: none;
+
+  transform:
+    translate(-8px, -8px);
+}
+
+.topRight {
+  top: 0;
+  right: 0;
+
+  border-left: none;
+  border-bottom: none;
+
+  transform:
+    translate(8px, -8px);
+}
+
+.bottomLeft {
+  bottom: 0;
+  left: 0;
+
+  border-right: none;
+  border-top: none;
+
+  transform:
+    translate(-8px, 8px);
+}
+
+.bottomRight {
+  right: 0;
+  bottom: 0;
+
+  border-left: none;
+  border-top: none;
+
+  transform:
+    translate(8px, 8px);
+}
+
+.activeZone .corner {
+  opacity: 0.7;
+
+  transform:
+    translate(0, 0);
+}
+
+
+.legalFooter {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  padding: 28px 40px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 30px;
+
+  background:
+    rgba(11, 11, 11, 0.85);
+
+  backdrop-filter: blur(5px);
+
+  -webkit-backdrop-filter:
+    blur(5px);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.05);
+
+  color: #555555;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.5px;
+}
+
+.legalLeft {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  min-width: 0;
+}
+
+.reestr {
+  font-weight: 700;
+}
+
+.legalLinks {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px 25px;
+}
+
+.legalLinks a {
+  color: #555555;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease;
+}
+
+.legalLinks a:hover {
+  color: #ffffff;
+}
+
+.legalRight {
+  flex-shrink: 0;
+
+  white-space: nowrap;
+}
+
+
+.modalOverlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(0, 0, 0, 0.85);
+
+  backdrop-filter:
+    blur(4px);
+
+  -webkit-backdrop-filter:
+    blur(4px);
+
+  animation:
+    modalFade
+    0.25s
+    ease;
+}
+
+.modalContent {
+  width: 100%;
+
+  max-width: 400px;
+
+  padding: 35px 25px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid #333333;
+
+  border-radius: 14px;
+
+  background: #161616;
+
+  text-align: center;
+
+  animation:
+    modalDrop
+    0.35s
+    ease;
+}
+
+.modalContent h3 {
+  margin-bottom: 15px;
+
+  font-size: 22px;
+}
+
+.modalContent p {
+  margin-bottom: 10px;
+
+  color: #aaaaaa;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.closeBtn {
+  margin-top: 15px;
+
+  padding: 10px 30px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalDrop {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@media (max-width: 1100px) {
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .navBlock,
+  .formBlock,
+  .contactsBlock {
+    text-align: center;
+  }
+
+  .contactsBlock {
+    align-items: center;
+  }
+
+  .formBlock form {
+    max-width: 600px;
+  }
+
+  .navBlock ul {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px 30px;
+  }
+
+  .navBlock ul li {
+    margin-bottom: 0;
+  }
+
+  .legalFooter {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .legalRight {
+    white-space: normal;
+  }
+
+
+  .coordinatesWrapper {
+    margin-left: 0;
+
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .landscapeSection1,
+  .landscapeSection {
+    min-height: 100svh;
+  }
+
+  .landscapeSection1 {
+    height: 100svh;
+  }
+
+  .heroOverlay {
+    min-height: 100svh;
+
+    padding: 30px 15px;
+  }
+
+  .inviteHolder {
+    min-height: 100px;
+  }
+
+  .invite {
+    font-size:
+      clamp(
+        36px,
+        8vw,
+        70px
+      );
+
+    line-height: 1.15;
+  }
+
+  .inviteFixed {
+    width:
+      calc(100% - 30px);
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+      translate(-50%, -50%)
+      scaleY(1.1);
+  }
+
+  .bottomSection {
+    min-height: auto;
+
+    padding: 70px 20px;
+  }
+
+  .container {
+    gap: 70px;
+  }
+
+  .mainGrid {
+    gap: 55px;
+  }
+
+  .navBlock ul {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .formBlock h2 {
+    margin-bottom: 30px;
+  }
+
+  .partnersBlock {
+    padding-top: 30px;
+  }
+
+  .logos {
+    gap: 30px;
+  }
+
+  .overlayContent {
+    padding:
+      50px 20px 30px;
+  }
+
+  .coordinatesWrapper {
+    margin: 0;
+  }
+
+  .targetZone {
+    width:
+      min(280px, 75vw);
+
+    height: 170px;
+  }
+
+  .legalFooter {
+    padding: 22px 20px;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .legalLinks {
+    justify-content: center;
+
+    gap: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .heroOverlay {
+    padding:
+      20px 15px;
+  }
+
+  .inviteHolder {
+    min-height: 90px;
+  }
+
+  .invite {
+    max-width: 360px;
+
+    padding: 0;
+
+    font-size:
+      clamp(
+        30px,
+        8.5vw,
+        42px
+      );
+
+    line-height: 1.15;
+  }
+
+  .inviteFixed {
+    width:
+      calc(100% - 30px);
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+      translate(-50%, -50%)
+      scaleY(1);
+  }
+
+  .bottomSection {
+    padding: 55px 15px;
+  }
+
+  .container {
+    gap: 55px;
+  }
+
+  .mainGrid {
+    gap: 45px;
+  }
+
+  .navBlock h3,
+  .contactsBlock h3,
+  .partnersBlock h3 {
+    font-size: 11px;
+
+    letter-spacing: 1.7px;
+  }
+
+  .navBlock ul li a {
+    font-size: 15px;
+  }
+
+  .formBlock h2 {
+    max-width: 320px;
+
+    margin-bottom: 28px;
+
+    font-size: 24px;
+
+    line-height: 1.25;
+  }
+
+  .formBlock form {
+    max-width: 100%;
+
+    gap: 18px;
+  }
+
+  .inputGroup input {
+    font-size: 15px;
+  }
+
+  .phoneInputWrapper {
+    gap: 6px;
+  }
+
+  .flag,
+  .prefix {
+    font-size: 15px;
+  }
+
+  .disclaimer {
+    font-size: 10px;
+
+    line-height: 1.5;
+  }
+
+  .submitBtn {
+    padding:
+      14px 18px;
+
+    font-size: 15px;
+  }
+
+  .contactsBlock {
+    gap: 30px;
+  }
+
+  .logos {
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .logoFormula,
+  .logoFinntrail {
+    font-size: 20px;
+  }
+
+  .overlayContent {
+    padding:
+      40px 15px 20px;
+  }
+
+  .caption {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .geo {
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .targetZone {
+    width:
+      min(220px, 70vw);
+
+    height: 135px;
+  }
+
+  .corner {
+    width: 11px;
+    height: 11px;
+  }
+
+  .legalFooter {
+    padding:
+      18px 15px;
+
+    font-size: 9px;
+  }
+
+  .legalLinks {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  .modalContent {
+    padding:
+      30px 20px;
+  }
+
+  .modalContent h3 {
+    font-size: 20px;
+  }
+
+  .modalContent p {
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 360px) {
+
+  .invite {
+    font-size: 28px;
+  }
+
+  .bottomSection {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .formBlock h2 {
+    font-size: 21px;
+  }
+
+  .targetZone {
+    width: 200px;
+
+    height: 125px;
+  }
+
+  .legalFooter {
+    font-size: 8px;
+  }
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .invite,
+  .animateTop,
+  .animateTopDelay1,
+  .animateTopDelay2,
+  .animateTopDelay3,
+  .modalContent {
+    animation: none;
+
+    opacity: 1;
+  }
+
+  .corner,
+  .invite {
+    transition: none;
+  }
+}

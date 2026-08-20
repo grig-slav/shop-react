@@ -1,0 +1,259 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px clamp(12px, 3vw, 20px);
+  z-index: 1001;
+  transition: transform 0.4s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.headerHidden {
+  transform: translateY(-100%);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 1001;
+  flex-shrink: 0;
+}
+
+.logoImage {
+  height: clamp(48px, 8vw, 120px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  padding: 10px clamp(12px, 2vw, 30px);
+  border-radius: 10px;
+  gap: clamp(6px, 1.5vw, 15px);
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.navLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: clamp(13px, 1.1vw, 19px);
+  font-weight: 600;
+  padding: 8px 10px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: #cccccc;
+}
+.rightBlock {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1vw, 12px);
+  flex-shrink: 0;
+}
+
+.actionBtn {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: clamp(12px, 1vw, 19px);
+  font-weight: 600;
+  padding: clamp(10px, 1.5vw, 20px) clamp(14px, 2vw, 35px);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.actionBtn:hover {
+  background: rgba(139, 0, 0, 0.95);
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(38px, 4vw, 60px);
+  height: clamp(38px, 4vw, 60px);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.iconLink:hover {
+  color: #b3b3b3;
+}
+
+.socialIcon {
+  width: clamp(20px, 2.2vw, 36px);
+  height: clamp(20px, 2.2vw, 36px);
+  object-fit: contain;
+  display: block;
+}
+
+.socialIcon1 {
+  width: clamp(34px, 4vw, 67px);
+  height: clamp(34px, 4vw, 67px);
+  object-fit: contain;
+  display: block;
+}
+
+.phoneLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: clamp(12px, 1vw, 19px);
+  font-weight: 700;
+  padding: clamp(10px, 1.5vw, 20px) clamp(12px, 1.6vw, 30px);
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.phoneLink:hover {
+  color: #b3b3b3;
+}
+
+.phoneIcon {
+  font-size: 18px;
+}
+
+.cartCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  background: rgba(139, 0, 0, 0.95);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 12px;
+}
+
+.burgerBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.burgerBtn span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #ffffff;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.burgerBtnActive span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burgerBtnActive span:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerBtnActive span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(320px, 80vw);
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(12px);
+  padding-top: 100px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1002;
+  box-sizing: border-box;
+}
+
+.mobileNavOpen {
+  transform: translateX(0);
+}
+
+.mobileNavLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileNavLink:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mobileNavOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+
+@media (max-width: 900px) {
+  .mainNav {
+    display: none;
+  }
+
+  .burgerBtn {
+    display: flex;
+  }
+
+  .mobileNav {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .phoneText {
+    display: none;
+  }
+
+  .phoneLink {
+    padding: 10px;
+  }
+}
